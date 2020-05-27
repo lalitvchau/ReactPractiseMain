@@ -12,12 +12,16 @@ import BasicJSReducer from './BasicJSReducer';
 import Counter from './Reducer/Counter';
 import CounterThree from './Reducer/CounterThree';
 import Main from './Reducer/ContextWithReducer/Main';
+import DataFetchWithUseState from './Reducer/DataFetchWithUseState';
+import DataFetchReduce from './Reducer/DataFetchReduce';
 
 export const Hook = () => {
 	return (
 		<div>
 			{/* <Counter2 /> */}
-			<Main/>
+			<DataFetchReduce />
+			<DataFetchWithUseState />
+			<Main />
 			<Counter />
 			<CounterThree />
 			<br />
