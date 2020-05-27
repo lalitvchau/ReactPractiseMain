@@ -1,0 +1,18 @@
+const fetchTransferConditions = async (mappingIdLocal) => {
+    const url = `${BASEURLS.transferConditions}/${encodeURIComponent(mappingIdLocal)}`;
+    let resultSet = null;
+    const acceptType = CONSTANTS.httpMediaTypes.transferConditions;
+    if (!mappingIdLocal) {
+      return resultSet;
+    }
+    try {
+      const response = await API.get(url, null, acceptType);
+      const userResponse = await response;
+      if (userResponse) {
+        resultSet = userResponse;
+      }
+    } catch (error) {
+      console.log(`fetchTransferConditionsByMappingId error occurred: ${error}`);
+    }
+    return resultSet;
+  };
